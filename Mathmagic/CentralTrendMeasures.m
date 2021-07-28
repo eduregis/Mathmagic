@@ -49,8 +49,7 @@
     double mean = 1.0;
     
     for (id obj in array) {
-        double currentNumber = [((NSNumber*)obj) doubleValue];
-        mean *= currentNumber;
+        mean *= [((NSNumber*)obj) doubleValue];
     }
     
     return pow(mean, 1.0/array.count);
