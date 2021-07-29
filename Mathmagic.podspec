@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "Mathmagic"
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.5"
   spec.summary      = "Using Math and Statistics functions to otimize the project development."
 
   # This description is used to generate tags and improve search results.
