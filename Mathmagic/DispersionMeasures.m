@@ -36,6 +36,14 @@
     
     double sum = 0;
     
+    if ((X.count == 0) && (Y.count == 0)) {
+        @throw [[NSException alloc]initWithName:@"This is Custom Exception" reason:@"Os vetores estão vazios!" userInfo:nil];
+    }
+    
+    if (X.count != Y.count) {
+        @throw [[NSException alloc]initWithName:@"This is Custom Exception" reason:@"Os vetores não possuem o mesmo tamanho!" userInfo:nil];
+    }
+    
     for (int i = 0; i < X.count; i++) {
         sum += ([(NSNumber*)[X objectAtIndex: i] doubleValue] - xMean) * ([(NSNumber*)[Y objectAtIndex: i] doubleValue] - yMean);
     }
@@ -44,6 +52,7 @@
 }
 
 -(double) correlation:(NSArray<NSNumber*>*) X :(NSArray<NSNumber*>*) Y {
+    
     double covariance = [self covariance:X :Y];
     double XStandardVariation = [self standardDeviation:X];
     double YStandardVariation = [self standardDeviation:Y];

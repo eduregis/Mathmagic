@@ -33,6 +33,14 @@
     double mean = 0;
     double sumWeight = 0;
     
+    if ((array.count == 0) && (weights.count == 0)) {
+        @throw [[NSException alloc]initWithName:@"This is Custom Exception" reason:@"Os vetores estão vazios!" userInfo:nil];
+    }
+    
+    if (array.count != weights.count) {
+        @throw [[NSException alloc]initWithName:@"This is Custom Exception" reason:@"Os vetores não possuem o mesmo tamanho!" userInfo:nil];
+    }
+    
     for (int i = 0; i < array.count; i++) {
         mean += [(NSNumber*)[array objectAtIndex: i] doubleValue] * [(NSNumber*)[weights objectAtIndex: i] doubleValue];
     }

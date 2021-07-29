@@ -26,6 +26,14 @@ class MathmagicTests: XCTestCase {
                       "String equality test failed, processRequest != \(sut.weightedMean([7.0, 8.0, 6.0, 7.5], [1, 2, 3, 4]))" )
     }
     
+    func test_weightedMean_diferent_sizes() {
+        XCTAssertNoThrow(try sut.weightedMean([7.0, 6.0, 8.0, 7.5], [1, 2, 3]))
+    }
+    
+    func test_weightedMean_empty_arrays() {
+        XCTAssertNoThrow((try sut.weightedMean([], [])))
+    }
+    
     func test_geometricMean() {
         XCTAssertTrue(12.0 == sut.geometricMean([3.0, 12.0, 16.0, 36.0]),
                       "String equality test failed, processRequest != \(sut.geometricMean([3.0, 12.0, 16.0, 36.0]))" )
