@@ -2,7 +2,6 @@
 
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
 ![Release Tag](https://img.shields.io/github/v/tag/eduregis/Mathmagic?color=gre&label=Release)
 
 É um framework cujo objetivo é otimizar o desenvolvemento em atividades relacionadas ao meio estatístico cujo uso dessas funções minimizaria o tempo de implementação.
