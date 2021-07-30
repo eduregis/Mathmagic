@@ -200,7 +200,9 @@ pod init
 ```
 pod ‘Mathmagic', '~> 0.0.5’
 ```
-    mude também a versão minima para 14.0, no começo do arquivo
+remova a marcação de comentário (#) do comando # platform :ios, '9.0'.
+mude também a versão minima de 9.0 para 14.0, no começo do arquivo.
+
 - E então, volte ao termina e digite:
 ```sh
 pod install
