@@ -22,10 +22,7 @@
     	    - [Desvio-padrão](#desvio-padrao)
     	    - [Covariância](#covariancia)
     	    - [Correlação](#correlacao)
-
-- [Communication](#communication)
 - [Installation](#installation)
-- [Release Notes](#release-notes)
 - [License](#license)
 
 ## Medidas Estátisticas
@@ -193,6 +190,22 @@ dis.correlation([1.0, 2.0, 3.0, 4.0, 5.0], [2.0, 3.0, 5.0, 8.0, 10.0])
 ```bash
 $ gem install cocoapods
 ```
+
+Para importar o framework para um projeto, faça o seguinte:
+- Abra um terminal na pasta do projeto e digite:
+```sh
+pod init
+```
+- Agora, um arquivo chamado Podfile foi criado na pasta do seu projeto, abra-o como bloco de notas e coloque antes da linha com 'end':
+```
+pod ‘Mathmagic', '~> 0.0.5’
+```
+    mude também a versão minima para 14.0, no começo do arquivo
+- E então, volte ao termina e digite:
+```sh
+pod install
+```
+- Por fim, entre no projeto pelo .xcworkspace, criado após o pod install. Basta importar o framework com import.
 
 ## License
 
